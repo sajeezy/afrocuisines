@@ -1,0 +1,68 @@
+<div class="container">
+<%= simple_form_for(@receipe) do |f| %>
+  <% if @receipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@receipe.errors.count, "error") %> prohibited this receipe from being saved:</h2>
+
+      <ul>
+      <% @receipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="form-group">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: "form-control"  %>
+  </div>
+
+   <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form-control"  %>
+  </div>
+
+ 
+<div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+
+ <div class="row">
+  <div class="col-md-6">
+    <h3>Ingredients</h3>
+    
+    <div id="ingredients">
+      <%= f.simple_fields_for :ingredients do |ingredient| %>
+        <%= render 'ingredient_fields', f: ingredient %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'Add Ingredient', f, :ingredients, class: "btn btn-default add-button" %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-6">
+    <h3>Directions</h3>
+    
+    <div id="instructions">
+      <%= f.simple_fields_for :instructions do |instruction| %>
+        <%= render 'instruction_fields', f: instruction %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'Add Step', f, :instructions, class: "btn btn-default add-button" %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>
+
+

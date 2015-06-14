@@ -1,0 +1,19 @@
+<div class="col-md-12">
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+	<div class="row">
+		<% @receipe.each do |receipe| %>
+
+		<div class="col-md-4  image_wrapper">
+			<%= link_to image_tag(receipe.image.url, size: "400x300"), receipe %>
+			<p class="lead text-center"> <%= receipe.title %> </p>
+		</div>
+
+		<% end %>
+	</div>
+
+</div>
+
+</div>
+

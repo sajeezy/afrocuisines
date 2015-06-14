@@ -1,0 +1,201 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,700);
+
+
+$font-family: 'Roboto', sans-serif;
+$navbar-height:45px;
+$navbar-default-bg:white;
+$navbar-default-brand-color:black;
+$brand-primary:black;
+
+
+@import "bootstrap-sprockets";
+@import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar-default .navbar-brand {
+  color: rgb(6, 4, 1);
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #777;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #000; 
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+ color: #B5C9CB; 
+}
+
+.navbar {
+  border: 0;
+}
+
+.highlight {
+  background-color: #B5C9CB;
+  color: #000;
+  padding: 0 10px 0;
+}
+
+.jumbotron{
+padding-top:150px;
+background-image: image-url("image5.jpg");
+color:#fff;
+background-size: cover; 
+border-radius: 0 !important;
+text-align: center;
+margin-top: -9px;
+height: 849px;
+}
+
+.jumbotron .container {
+  position: relative;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.footer li {
+	padding-right:5px;
+	display:inline;
+	text-decoration:none;
+}
+
+.footer p {
+	padding-left:15px;
+}
+
+
+.artistsm li{
+    padding-right:5px;
+  display:inline;
+  text-decoration:none;
+}
+
+.artistsm li:hover {
+  background-color: #fff;
+ color: #B5C9CB; 
+
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+}
+
+
+
+.main_content {
+  padding: 0 0 50px 0;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  @include box-shadow;
+  background: white;
+  font-weight: bold;
+}
+
+
+.receipe {
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  @include box-shadow;
+}
+  .image_wrapper {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+  }
+.receipeimg {
+    width: 100%;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    &:hover {
+      transform: scale(1.075);
+    }
+  }
+
+
+#receipe_top {
+  margin-bottom: 50px;
+}
+
+#receipe_info, #ingredients, #instructions {
+  background: white;
+  min-height: 360px;
+  border-radius: 5px;
+  padding: 2em 8%;
+}
+
+.receipe_image {
+  max-width: 100%;
+  border-radius: 5px;
+  @include box-shadow;
+}
+
+#receipe_info {
+  h1 {
+    font-size: 36px;
+    font-weight: normal;
+  }
+  .description {
+    color: #8A8A8A;
+    font-size: 20px;
+  }
+}
+
+#ingredients, #instructions {
+  margin-bottom: 50px;
+  ul, ol {
+    padding-left: 18px;
+    li {
+      padding: 1em 0;
+      border-bottom: 1px solid #EAEAEA;
+    }
+  }
+}
+
+.form-inline {
+  margin-top: 15px;
+}
+.form-input {
+  width: 65% !important;
+  float: left;
+}
+.form-button {
+  float: left;
+  width: 30% !important;
+  margin-left: 5%;
+}
+.add-button {
+  margin-top: 25px;
+}
+
+
+
