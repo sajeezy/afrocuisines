@@ -3,11 +3,11 @@
 
 
 <%= link_to '< Back', root_path, :class => 'btn btn-default' %>	
+  <% if user_signed_in? %>
 <%= link_to 'Edit', edit_receipe_path, :class => 'btn btn-default' %>
 <%= link_to 'Delete', receipe_path, method: :delete,  data: {confirm: "Are you sure?"}, :class => 'btn btn-default' %>
+      <% end %>
 
-
-	
 	<div class="row">
 <br/>
 		<div class="col-md-4">
@@ -17,7 +17,10 @@
 		<div class="col-md-8 text-center">
 			<h3> <%= @receipe.title %> </h3>
 				<br/>
-				<p><%= @receipe.description %></p>
+        <p><%= @receipe.description %></p>
+				<p>
+        Submitted by: <%= @receipe.user.email %>
+        </p>
 				<p><%= @receipe.created_at %></p>
 		</div>
 

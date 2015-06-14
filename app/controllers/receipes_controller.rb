@@ -1,5 +1,6 @@
 class ReceipesController < ApplicationController
 	before_action :find_receipe, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
 	def index
 		@receipe = Receipe.all.order("created_at DESC")
 	end
@@ -9,11 +10,11 @@ class ReceipesController < ApplicationController
 	end
 
 	def new
-		@receipe = Receipe.new
+		@receipe = current_user.receipes.build
 	end
 
 	def create
-		@receipe = Receipe.new(receipe_params)
+		@receipe = current_user.receipes.build(receipe_params)
 
 		if @receipe.save
 			redirect_to @receipe, notice: 'Successfully created new afrocuisine'

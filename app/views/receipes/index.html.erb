@@ -2,6 +2,10 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
+ <% if user_signed_in? %>
+    <a class="btn btn-lg" <%= link_to 'Add Afrocuisine', new_receipe_path %> </a>
+  <% end %>
+
 	<div class="row">
 		<% @receipe.each do |receipe| %>
 
