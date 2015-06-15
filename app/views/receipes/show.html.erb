@@ -3,7 +3,8 @@
 
 
 <%= link_to '< Back', root_path, :class => 'btn btn-default' %>	
-  <% if user_signed_in? %>
+
+  <% if current_user && @receipe.user == current_user %>
 <%= link_to 'Edit', edit_receipe_path, :class => 'btn btn-default' %>
 <%= link_to 'Delete', receipe_path, method: :delete,  data: {confirm: "Are you sure?"}, :class => 'btn btn-default' %>
       <% end %>
