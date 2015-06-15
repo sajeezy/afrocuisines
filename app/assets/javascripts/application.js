@@ -12,8 +12,7 @@
 //
 //= require bootstrap
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require cocoon
-//= require jquery.turbolinks
 //= require_tree .
-
