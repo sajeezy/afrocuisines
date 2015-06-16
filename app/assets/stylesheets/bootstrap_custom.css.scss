@@ -26,7 +26,7 @@ $brand-primary:black;
 }
 
 .navbar-default .navbar-brand:hover {
-  color: #777;
+  color: #390002;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -34,7 +34,7 @@ $brand-primary:black;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
- color: #B5C9CB; 
+ color: #390002; 
 }
 
 .navbar {
@@ -42,20 +42,40 @@ $brand-primary:black;
 }
 
 .highlight {
-  background-color: #B5C9CB;
-  color: #000;
+  background-color: white;
+  color: #390002;
   padding: 0 10px 0;
+}
+
+a.btn {
+  background-color: #390002;
+  border-radius: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  height: 60px;
+  line-height: 60px;
+  margin: 40px 0;
+  padding: 0;
+  transition: background-color .5s;
+  width: 200px;
+}
+
+a.btn:hover {
+background-color:white;
+color:black;
+transition:background-color .5s;
 }
 
 .jumbotron{
 padding-top:150px;
-background-image: image-url("image5.jpg");
+background-image: image-url("food3.jpg");
 color:#fff;
 background-size: cover; 
 border-radius: 0 !important;
 text-align: center;
 margin-top: -9px;
-height: 849px;
+height: 500px;
 }
 
 .jumbotron .container {
@@ -68,6 +88,29 @@ height: 849px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
+
+.jumbotronabout{
+padding-top:150px;
+background-image: image-url("food13.jpg");
+color:#fff;
+background-size: cover; 
+border-radius: 0 !important;
+text-align: center;
+margin-top: -9px;
+height: 500px;
+}
+
+.jumbotronabout .container {
+  position: relative;
+}
+
+.jumbotronabout h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
 
 .footer li {
 	padding-right:5px;

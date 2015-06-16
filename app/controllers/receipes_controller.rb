@@ -2,7 +2,7 @@ class ReceipesController < ApplicationController
 	before_action :find_receipe, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show]
 	def index
-		@receipe = Receipe.all.order("created_at DESC")
+		@receipe = Receipe.all.order("created_at DESC").paginate(page: params[:page], per_page: 9)
 	end
 
 	def show

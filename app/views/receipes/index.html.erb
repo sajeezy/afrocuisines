@@ -1,3 +1,4 @@
+<%= render 'pages/home' unless user_signed_in? %>
 <div class="col-md-12">
 <div class="container">
 <p id="notice"><%= notice %></p>
@@ -21,3 +22,6 @@
 
 </div>
 
+<div class="center">
+  <%= will_paginate @receipe, renderer: BootstrapPagination::Rails, inner_window: 1, outer_window: 0 %>
+</div>

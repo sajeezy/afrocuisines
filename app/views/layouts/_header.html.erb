@@ -14,13 +14,14 @@
 
   <div class="collapse navbar-collapse navbar-ex1-collapse pull-right">
     <ul class="nav navbar-nav">
-      <li><%= link_to "NEW", new_receipe_path %></li> 
+     <li><%= link_to "about", about_path %></li>
+      <li><%= link_to "afrocuisine", new_receipe_path, :class => " glyphicon-plus" %></li> 
 
       <% if user_signed_in? %>
       <li><%= link_to "Account Settings", edit_user_registration_path %></li>
       <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li> 
       <% else %>
-      <li><%= link_to "Sign In", new_user_session_path %></li> 
+      <li><%= link_to "sign in", new_user_session_path %></li> 
 
       <% end %>
     </ul>
